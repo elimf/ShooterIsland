@@ -7,6 +7,7 @@ public class sampleTest : MonoBehaviour
 
 {
     private int[] tabPointLife = new int[] {100, 90, 70, 50, 30,10,0 };
+    private float[] tabIndiceSpeed = new float[] { 0, 0.02f, 0.04f, 0.06f, 0.08f, 0.15f, 0 };
     private int indexLife;
     private Vector2 move;
     Rigidbody2D rb;
@@ -14,19 +15,20 @@ public class sampleTest : MonoBehaviour
     public StateStarShip stateStarShip;
     private SpriteRenderer UIStarShip;
     private bool isNotTrigger;
-    float speed = 5f;
+    float speed = 6f;
+    float indiceSpeed = 0;
     // Start is called before the first frame update
     void Start()
     {
-        indexLife = 3;
+        indexLife = 0;
         initialeStateStarShip(tabPointLife[indexLife]);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        linear += new Vector2(0.01f, 0);
-        rb.MovePosition(rb.position  + ((move * speed) + (linear)) * (Time.fixedDeltaTime));
+        linear += new Vector2(0.05f, 0);
+        rb.MovePosition(rb.position  + ((move * speed) + linear) * (Time.fixedDeltaTime));
     }
 
     private void Awake()
@@ -51,7 +53,7 @@ public class sampleTest : MonoBehaviour
         {
             //TODO GAMEOVER
         }
-
+        indiceSpeed = tabIndiceSpeed[indexLife];
         stateStarShip.setPointLife(tabPointLife[indexLife]);
         isNotTrigger = true;
         StartCoroutine(renderDommageInStarShip());
@@ -74,7 +76,7 @@ public class sampleTest : MonoBehaviour
         ;
         StartCoroutine(clignoteStarShip(5));
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.5f);
 
         UIStarShip.color = Color.white;
 
@@ -89,7 +91,6 @@ public class sampleTest : MonoBehaviour
     {
         for (int i = 0; i <= numberClignote; i++)
         {
-            Debug.Log(UIStarShip.enabled);
             UIStarShip.enabled = !UIStarShip.enabled;
             yield return new WaitForSeconds(0.35f);
         }
