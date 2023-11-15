@@ -7,10 +7,13 @@ public class playerControl : MonoBehaviour
     public GameObject BulletPrefab;
     public float BulletSpeed;
     bool fired = false;
+    public GameObject targetFrom;
+    public sampleTest refTargetFrom;
     // Start is called before the first frame update
     void Start()
     {
-        
+        refTargetFrom = targetFrom.GetComponent<sampleTest>();
+
     }
 
     // Update is called once per frame
@@ -19,13 +22,18 @@ public class playerControl : MonoBehaviour
 
         if(Input.GetAxis("Fire1") == 1) 
         {
+            Vector3 positionClic = Input.mousePosition;
+
+            Vector3 positionDansScene = Camera.main.ScreenToWorldPoint(positionClic);
+            Debug.Log(positionDansScene);
+
             if (fired == false) 
             {
                 fired = true;
             GameObject BulletInstance = Instantiate(BulletPrefab);
             BulletInstance.transform.SetParent(transform.parent);
-            BulletInstance.transform.position = new Vector3(transform.position.x, transform.position.y+1.10f, transform.position.z);
-            BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(0, BulletSpeed, transform.position.z);
+            BulletInstance.transform.position = new Vector3(transform.position.x + 2.10f , transform.position.y, transform.position.z);
+            BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3((positionDansScene.x - transform.position.x) + refTargetFrom.indiceSpeed, positionDansScene.y - transform.position.y, 0) ;
             Destroy(BulletInstance.gameObject,5); 
             }
         }
