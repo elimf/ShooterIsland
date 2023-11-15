@@ -7,7 +7,7 @@ public class sampleTest : MonoBehaviour
 
 {
     private int[] tabPointLife = new int[] {100, 90, 70, 50, 30,10,0 };
-    private float[] tabIndiceSpeed = new float[] { 0, 0.01f, 0.03f, 0.07f, 0.09f, 0.15f, 0 };
+    private float[] tabIndiceSpeed = new float[] { 0, 1f, 3f, 7f, 9f, 11f, 0 };
     private int indexLife;
     private Vector2 move;
     Rigidbody2D rb;
@@ -15,8 +15,8 @@ public class sampleTest : MonoBehaviour
     public StateStarShip stateStarShip;
     private SpriteRenderer UIStarShip;
     private bool isNotTrigger;
-    float speed = 6f;
-    float indiceSpeed = 0;
+    public float speed = 6f;
+    public float indiceSpeed = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class sampleTest : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        linear += new Vector2(0.025f, 0);
+        linear = new Vector2(3f + indiceSpeed, 0);
         rb.MovePosition(rb.position  + ((move * speed) + linear) * (Time.fixedDeltaTime));
     }
 
