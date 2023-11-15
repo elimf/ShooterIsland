@@ -7,7 +7,7 @@ public class sampleTest : MonoBehaviour
 
 {
     private int[] tabPointLife = new int[] {100, 90, 70, 50, 30,10,0 };
-    private float[] tabIndiceSpeed = new float[] { 0, 0.02f, 0.04f, 0.06f, 0.08f, 0.15f, 0 };
+    private float[] tabIndiceSpeed = new float[] { 0, 0.01f, 0.03f, 0.07f, 0.09f, 0.15f, 0 };
     private int indexLife;
     private Vector2 move;
     Rigidbody2D rb;
@@ -27,7 +27,7 @@ public class sampleTest : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        linear += new Vector2(0.05f, 0);
+        linear += new Vector2(0.025f, 0);
         rb.MovePosition(rb.position  + ((move * speed) + linear) * (Time.fixedDeltaTime));
     }
 
