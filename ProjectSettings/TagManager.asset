@@ -8,6 +8,7 @@ TagManager:
   - PowerUp
   - EnnemyBullet
   - Limit
+  - obstacle
   layers:
   - Default
   - TransparentFX
