@@ -20,6 +20,7 @@ public class playerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal"),0);
 
         if(Input.GetAxis("Fire1") == 1) 
         {

@@ -11,14 +11,22 @@ public class PlayerScript : MonoBehaviour
  
      // 2 - Stockage du mouvement
      private Vector2 movement;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+      public GameObject BulletPrefab;
+      public float BulletSpeed;
+      bool fired = false;
+      //public sampleTest refTargetFrom;
+  // Start is called before the first frame update
+  void Start()
+  {
+      //refTargetFrom = targetFrom.GetComponent<sampleTest>();
+  }
 
    void Update()
   {
+    Vector3 positionClic = Input.mousePosition;
+
+    Vector3 positionDansScene = Camera.main.ScreenToWorldPoint(positionClic);
+    Debug.Log(positionDansScene);
     // 3 - Récupérer les informations du clavier/manette
     float inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
@@ -28,7 +36,35 @@ public class PlayerScript : MonoBehaviour
       speed.x * inputX,
       speed.y * inputY);
 
+    GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal"), 0);
+
+    if (Input.GetAxis("Fire1") == 1)
+    {
+      if (fired == false)
+      {
+        fired = true;
+        GameObject BulletInstance = Instantiate(BulletPrefab);
+        BulletInstance.transform.SetParent(transform.parent);
+        BulletInstance.transform.position = new Vector3(transform.position.x + 2.10f, transform.position.y, transform.position.z);
+        BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3((positionDansScene.x - transform.position.x) + positionDansScene.y - transform.position.y, 0);
+        Destroy(BulletInstance.gameObject, 5);
+      }
+    }
+    else
+    {
+      fired = false;
+    }
+
   }
+
+  /*void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.tag == "EnnemyBullet")
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
+    }
+  }*/
 
   void FixedUpdate()
   {
