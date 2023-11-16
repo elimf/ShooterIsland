@@ -48,6 +48,7 @@ public class CreatePlayer : MonoBehaviour
 
                 // Add the playerName to the list of registered players
                 registeredPlayerNames.Add(playerName);
+                Debug.Log("Player name added to list: " + playerName);
 
                 // Save the updated list to disk
                 SavePlayerNames();
@@ -89,6 +90,7 @@ public class CreatePlayer : MonoBehaviour
 
             // Deserialize the JSON to get the saved player names
             registeredPlayerNames = JsonUtility.FromJson<List<string>>(json);
+            Debug.Log(registeredPlayerNames.Count + " player names loaded from disk.");
         }
     }
 }
