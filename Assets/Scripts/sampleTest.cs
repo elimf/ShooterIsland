@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,7 @@ public class sampleTest : MonoBehaviour
 {
     private int[] tabPointLife = new int[] {100, 90, 70, 50, 30,10,0 };
     private float[] tabIndiceSpeed = new float[] { 0, 1f, 3f, 7f, 9f, 11f, 0 };
+    private string[] triggerDommageStep =  { "obstacle", "bullets" };
     private int indexLife;
     private Vector2 move;
     Rigidbody2D rb;
@@ -67,19 +69,31 @@ public class sampleTest : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
 
     {
+        Debug.Log(collision.tag);
+        string tag = collision.tag;
+        if(triggerDommageStep.Contains(tag))
+        {
+            takeDommage();
+        }else if(tag == "portail")
+        {
+            // Next Scene
+        }
+    }
+
+
+    void takeDommage()
+    {
         if (isNotTrigger) { return; }
         indexLife += 1;
-        if(indexLife == tabPointLife.Length -1)
+        if (indexLife == tabPointLife.Length - 1)
         {
-         SceneManager.LoadScene("GameOver");
-         return;
+            SceneManager.LoadScene("GameOver");
+            return;
         }
         indiceSpeed = tabIndiceSpeed[indexLife];
         stateStarShip.setPointLife(tabPointLife[indexLife]);
         isNotTrigger = true;
         StartCoroutine(renderDommageInStarShip());
-
-
     }
 
     public void initialeStateStarShip(int value)
