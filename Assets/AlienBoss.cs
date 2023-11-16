@@ -13,35 +13,28 @@ public class AlienBoss : MonoBehaviour
     void Start()
     {
         refToTarget = targetToShoot.GetComponent<sampleTest>();
-        StartCoroutine(Tir());
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(targetToShoot.transform);
+        StartCoroutine(Tir());
     }
 
 
     IEnumerator Tir()
     {
-        while (true)
+        if (targetToShoot != null)
         {
-            Tirer();
+            GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+
+            Vector3 direction = (targetToShoot.transform.position - transform.position).normalized;
+            projectile.GetComponent<Rigidbody2D>().velocity = direction * 4f;
             yield return new WaitForSeconds(intervalleTir);
         }
     }
 
-    void Tirer()
-    {
-        if (targetToShoot != null)
-        {
-            // Créer le projectile
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
-
-            // Ajouter une force au projectile pour qu'il se déplace vers la cible
-            Vector3 direction = (targetToShoot.transform.position - transform.position).normalized;
-            projectile.GetComponent<Rigidbody2D>().velocity = direction * 4f;
-        }
-    }
+    
 }

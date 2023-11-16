@@ -21,6 +21,10 @@ public class obstacleDommage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        refTo.takeDommage();
+        if(handleDommageTo.tag == "Player")
+        {
+            refTo.takeDommage();
+
+        }
     }
 }
