@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
             GameObject EnnemyObject = Instantiate(EnnemyPrefab);
             EnnemyObject.transform.SetParent(transform);
             //EnnemyObject.transform.position = new Vector3(((positionDansScene.x - transform.position.x) + 20)  + positionDansScene.y - transform.position.y, 0);
-            EnnemyObject.transform.position = new Vector3(Player.transform.position.x + 20, Random.Range(Player.transform.position.x + 1, Player.transform.position.y + 3), Player.transform.position.z);
+            EnnemyObject.transform.position = new Vector3(Player.transform.position.x + 30, Random.Range(0, 10), 0);
             EnemySnawnTime = Random.Range(1, 4);
             Destroy(EnnemyObject.gameObject, 10);
         }

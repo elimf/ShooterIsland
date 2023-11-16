@@ -57,14 +57,14 @@ public class PlayerScript : MonoBehaviour
 
   }
 
-  /*void OnTriggerEnter2D(Collider2D other)
+  void OnTriggerEnter2D(Collider2D other)
   {
     if (other.tag == "EnnemyBullet")
     {
         Destroy(gameObject);
         Destroy(other.gameObject);
     }
-  }*/
+  }
 
   void FixedUpdate()
   {
