@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class sampleTest : MonoBehaviour
 
 {
@@ -49,9 +50,10 @@ public class sampleTest : MonoBehaviour
     {
         if (isNotTrigger) { return; }
         indexLife += 1;
-        if(indexLife == tabPointLife.Length - 1)
+        if(indexLife == tabPointLife.Length -1)
         {
-            //TODO GAMEOVER
+         SceneManager.LoadScene("GameOver");
+         return;
         }
         indiceSpeed = tabIndiceSpeed[indexLife];
         stateStarShip.setPointLife(tabPointLife[indexLife]);
@@ -60,8 +62,6 @@ public class sampleTest : MonoBehaviour
 
 
     }
-
-
 
     public void initialeStateStarShip(int value)
 
