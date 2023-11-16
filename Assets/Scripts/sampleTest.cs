@@ -66,22 +66,10 @@ public class sampleTest : MonoBehaviour
         Debug.Log(context.control.valueType.Name);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-
-    {
-        Debug.Log(collision.tag);
-        string tag = collision.tag;
-        if(triggerDommageStep.Contains(tag))
-        {
-            takeDommage();
-        }else if(tag == "portail")
-        {
-            // Next Scene
-        }
-    }
+  
 
 
-    void takeDommage()
+    public void takeDommage()
     {
         if (isNotTrigger) { return; }
         indexLife += 1;
