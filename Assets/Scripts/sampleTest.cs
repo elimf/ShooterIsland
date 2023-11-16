@@ -18,13 +18,20 @@ public class sampleTest : MonoBehaviour
     private bool isNotTrigger;
     public float speed = 6f;
     public float indiceSpeed = 0;
+    private Quaternion initialRotation; // Rotation initiale de l'objet
+
+
     // Start is called before the first frame update
     void Start()
     {
+        initialRotation = transform.rotation;
         indexLife = 0;
         initialeStateStarShip(tabPointLife[indexLife]);
     }
-
+    private void Update()
+    {
+       
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -38,11 +45,23 @@ public class sampleTest : MonoBehaviour
         UIStarShip = GetComponent<SpriteRenderer>();
 
     }
-
-    private void OnMovement(InputValue value)
+    void ProcessEventsInDynamicUpdate(InputAction.CallbackContext context)
     {
-        move = value.Get<Vector2>();
-        
+        Debug.Log(context.action.name);
+
+    }
+
+   
+
+
+    
+
+    public void InputSystemActionZ(InputAction.CallbackContext context)
+    {
+
+        move = context.ReadValue<Vector2>();
+
+        Debug.Log(context.control.valueType.Name);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

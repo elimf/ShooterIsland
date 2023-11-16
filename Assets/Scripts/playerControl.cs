@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class playerControl : MonoBehaviour
 {
@@ -24,15 +25,18 @@ public class playerControl : MonoBehaviour
         {
             Vector3 positionClic = Input.mousePosition;
 
+
             Vector3 positionDansScene = Camera.main.ScreenToWorldPoint(positionClic);
             Debug.Log(positionDansScene);
+            
 
             if (fired == false) 
             {
                 fired = true;
             GameObject BulletInstance = Instantiate(BulletPrefab);
             BulletInstance.transform.SetParent(transform.parent);
-            BulletInstance.transform.position = new Vector3(transform.position.x + 2.10f , transform.position.y, transform.position.z);
+                if (positionDansScene.x <= transform.position.x) { Debug.Log("d"); return; }
+                    BulletInstance.transform.position = new Vector3(transform.position.x + 2.10f , transform.position.y, transform.position.z);
             BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3((positionDansScene.x - transform.position.x) + refTargetFrom.indiceSpeed, positionDansScene.y - transform.position.y, 0) ;
             Destroy(BulletInstance.gameObject,5); 
             }
