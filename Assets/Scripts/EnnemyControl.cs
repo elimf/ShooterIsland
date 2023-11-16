@@ -52,6 +52,7 @@ public class EnnemyControl : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    
 }
 
 /*
