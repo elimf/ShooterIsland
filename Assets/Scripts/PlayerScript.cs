@@ -14,7 +14,6 @@ public class PlayerScript : MonoBehaviour
       public GameObject BulletPrefab;
       public float BulletSpeed;
       bool fired = false;
-      public GameObject targetFrom;
       //public sampleTest refTargetFrom;
   // Start is called before the first frame update
   void Start()
@@ -24,6 +23,10 @@ public class PlayerScript : MonoBehaviour
 
    void Update()
   {
+    Vector3 positionClic = Input.mousePosition;
+
+    Vector3 positionDansScene = Camera.main.ScreenToWorldPoint(positionClic);
+    Debug.Log(positionDansScene);
     // 3 - Récupérer les informations du clavier/manette
     float inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
@@ -37,11 +40,6 @@ public class PlayerScript : MonoBehaviour
 
     if (Input.GetAxis("Fire1") == 1)
     {
-      Vector3 positionClic = Input.mousePosition;
-
-      Vector3 positionDansScene = Camera.main.ScreenToWorldPoint(positionClic);
-      Debug.Log(positionDansScene);
-
       if (fired == false)
       {
         fired = true;
@@ -58,6 +56,15 @@ public class PlayerScript : MonoBehaviour
     }
 
   }
+
+  /*void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.tag == "EnnemyBullet")
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
+    }
+  }*/
 
   void FixedUpdate()
   {
