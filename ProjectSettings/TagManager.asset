@@ -18,6 +18,7 @@ TagManager:
   - Level1
   - BossLevel
   - MainMenu
+  - GameOver
   layers:
   - Default
   - TransparentFX
