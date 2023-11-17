@@ -9,7 +9,7 @@ public class AlienBoss : MonoBehaviour
     public GameObject targetToShoot;
     public GameObject projectilePrefab;
     public float intervalleTir = 2f;
-    private int[] tabPointLife = new int[] { 100, 95, 90, 85, 80, 75,70,65,60,55,50,45,40,35,30,25,20,15,10,5, 0 };
+    private int[] tabPointLife = new int[1001];
     int indexLife = 0;
 
     public StateStarShip stateEnemy = new StateStarShip();
@@ -21,6 +21,11 @@ public class AlienBoss : MonoBehaviour
 
     void Start()
     {
+        for (int i = 0; i <= 1000; i++)
+    {
+        tabPointLife[i] = 1000 - i;
+    }
+
         StartCoroutine(Tir());
         portail = GameObject.FindWithTag("SceneEnd");
         stateEnemy.setPointLife(indexLife);
@@ -51,7 +56,9 @@ public class AlienBoss : MonoBehaviour
 
     public void takeDommage()
     {
-        indexLife += 1;
+        indexLife += 10;
+        Debug.Log(indexLife);
+        Debug.Log(tabPointLife.Length - 1);
         if (indexLife == tabPointLife.Length - 1)
         {
             gameObject.SetActive(false);
