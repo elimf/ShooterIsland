@@ -599,6 +599,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 914951774}
     m_Modifications:
+    - target: {fileID: 1835539189889930918, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 1991314041}
     - target: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_Name
       value: Ennemy (5)
@@ -661,9 +665,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 183473755}
-    - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 183473754}
   m_SourcePrefab: {fileID: 100100000, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
 --- !u!4 &183473752 stripped
@@ -690,19 +691,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
---- !u!114 &183473755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183473753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 59253455}
 --- !u!1 &200703264
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 914951774}
     m_Modifications:
+    - target: {fileID: 1835539189889930918, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 1991314041}
     - target: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_Name
       value: Ennemy
@@ -901,9 +893,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1762674835}
     - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1762674836}
@@ -1385,6 +1374,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 914951774}
     m_Modifications:
+    - target: {fileID: 1835539189889930918, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 1991314041}
     - target: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_Name
       value: Ennemy (2)
@@ -1447,9 +1440,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 501206042}
-    - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 501206041}
   m_SourcePrefab: {fileID: 100100000, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
 --- !u!4 &501206039 stripped
@@ -1476,19 +1466,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
---- !u!114 &501206042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501206040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 59253455}
 --- !u!1001 &526437216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1622,6 +1599,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 914951774}
     m_Modifications:
+    - target: {fileID: 1835539189889930918, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 1991314041}
     - target: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_Name
       value: Ennemy (1)
@@ -1681,34 +1662,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 674214017}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
 --- !u!4 &674214015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4090235891971207954, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
   m_PrefabInstance: {fileID: 674214014}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &674214016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-  m_PrefabInstance: {fileID: 674214014}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &674214017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674214016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 59253455}
 --- !u!1 &732983136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,6 +2366,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 914951774}
     m_Modifications:
+    - target: {fileID: 1835539189889930918, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 1991314041}
     - target: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_Name
       value: Ennemy (4)
@@ -2424,7 +2388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090235891971207954, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 261.7
+      value: 254.8
       objectReference: {fileID: 0}
     - target: {fileID: 4090235891971207954, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2468,9 +2432,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1454275816}
-    - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1454275815}
   m_SourcePrefab: {fileID: 100100000, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
 --- !u!4 &1454275813 stripped
@@ -2497,19 +2458,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
---- !u!114 &1454275816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454275814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 59253455}
 --- !u!1001 &1472855693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2518,6 +2466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 914951774}
     m_Modifications:
+    - target: {fileID: 1835539189889930918, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 1991314041}
     - target: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       propertyPath: m_Name
       value: Ennemy (3)
@@ -2580,9 +2532,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1472855697}
-    - targetCorrespondingSourceObject: {fileID: 3396454381881256080, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1472855696}
   m_SourcePrefab: {fileID: 100100000, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
 --- !u!4 &1472855694 stripped
@@ -2609,19 +2558,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
---- !u!114 &1472855697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472855695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 59253455}
 --- !u!1 &1480510213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,19 +2824,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4090235891971207954, guid: 8009dba5f245a4fbd9a0167633fc15e8, type: 3}
   m_PrefabInstance: {fileID: 204751629}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1762674835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124737939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 59253455}
 --- !u!114 &1762674836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3500,6 +3423,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c2b80c603054d7594f27909f16607a, type: 3}
+--- !u!1 &1991314041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7600481717322943132, guid: 57c2b80c603054d7594f27909f16607a, type: 3}
+  m_PrefabInstance: {fileID: 1991314040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2035231989
 PrefabInstance:
   m_ObjectHideFlags: 0
