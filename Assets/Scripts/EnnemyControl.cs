@@ -11,7 +11,6 @@ public class EnnemyControl : MonoBehaviour
     public GameObject targetFrom;
     public float shootTimer = 1;
     public float MovementSpeed;
-    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +35,6 @@ public class EnnemyControl : MonoBehaviour
             BulletInstance.transform.position = new Vector3(0,0,0);
             BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(-10,BulletSpeed,transform.position.z);
             BulletInstance.transform.position = new Vector3(transform.position.x, transform.position.y - 1.10f, transform.position.z);
-
-            Destroy(BulletInstance.gameObject, 5);
             shootTimer = 1;
         }
         else
