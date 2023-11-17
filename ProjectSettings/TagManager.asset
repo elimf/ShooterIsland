@@ -16,6 +16,7 @@ TagManager:
   - Level2
   - Level3
   - Level1
+  - BossLevel
   layers:
   - Default
   - TransparentFX
