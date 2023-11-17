@@ -9,6 +9,7 @@ TagManager:
   - EnnemyBullet
   - Limit
   - obstacle
+  - Level2
   layers:
   - Default
   - TransparentFX
