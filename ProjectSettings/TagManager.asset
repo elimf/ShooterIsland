@@ -9,6 +9,10 @@ TagManager:
   - EnnemyBullet
   - Limit
   - obstacle
+  - SceneEnd
+  - PortalBegin
+  - snowCircle1
+  - snowCircle2
   layers:
   - Default
   - TransparentFX

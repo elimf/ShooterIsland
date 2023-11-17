@@ -21,8 +21,10 @@ public class obstacleDommage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(handleDommageTo.tag == "Player")
+        Debug.Log("1-" + handleDommageTo.tag);
+        if(collision.gameObject.tag == "Player")
         {
+            Debug.Log("2-" + handleDommageTo.tag);
             refTo.takeDommage();
 
         }

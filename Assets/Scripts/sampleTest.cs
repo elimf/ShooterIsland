@@ -12,6 +12,7 @@ public class sampleTest : MonoBehaviour
     private float[] tabIndiceSpeed = new float[] { 0, 1f, 3f, 7f, 9f, 11f, 0 };
     private string[] triggerDommageStep =  { "obstacle", "bullets" };
     private int indexLife;
+    public bool cine = false;
     private Vector2 move;
     Rigidbody2D rb;
     private Vector2 linear;
@@ -21,11 +22,18 @@ public class sampleTest : MonoBehaviour
     public float speed = 6f;
     public float indiceSpeed = 0;
     private Quaternion initialRotation; // Rotation initiale de l'objet
+    string nomDeLaScene;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        if (cine)
+        {
+            Vector2 pos = new Vector2(0, 90);
+            moveTo(pos, 4);
+        }
+        nomDeLaScene = SceneManager.GetActiveScene().name;
         initialRotation = transform.rotation;
         indexLife = 0;
         initialeStateStarShip(tabPointLife[indexLife]);
@@ -37,8 +45,14 @@ public class sampleTest : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        linear = new Vector2(3f + indiceSpeed, 0);
-        rb.MovePosition(rb.position  + ((move * speed) + linear) * (Time.fixedDeltaTime));
+        if (nomDeLaScene.Contains("Boss")){
+            rb.MovePosition(rb.position + move* speed * (Time.fixedDeltaTime));
+        }
+        else {
+            linear = new Vector2(3f + indiceSpeed, 0);
+            rb.MovePosition(rb.position + ((move * speed) + linear) * (Time.fixedDeltaTime));
+        }
+        
     }
 
     private void Awake()
@@ -117,6 +131,12 @@ public class sampleTest : MonoBehaviour
         }
         UIStarShip.enabled = true;
 
+
+    }
+
+    public void moveTo(Vector2 position, int speed)
+    {
+        rb.MovePosition(rb.position + position * speed * (Time.fixedDeltaTime));
 
     }
 

@@ -176,3 +176,4 @@ MonoBehaviour:
   targetFrom: {fileID: 0}
   shootTimer: 3
   MovementSpeed: 1
+  Player: {fileID: 0}
