@@ -17,6 +17,7 @@ TagManager:
   - Level3
   - Level1
   - BossLevel
+  - MainMenu
   layers:
   - Default
   - TransparentFX
