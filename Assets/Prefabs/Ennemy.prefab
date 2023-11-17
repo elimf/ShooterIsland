@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3396454381881256080}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.82, y: 0.3174, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.444}
   m_LocalScale: {x: 1.3174, y: 1.4761, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -176,3 +176,4 @@ MonoBehaviour:
   targetFrom: {fileID: 0}
   shootTimer: 3
   MovementSpeed: 1
+  Player: {fileID: 0}

@@ -34,8 +34,8 @@ public class EnnemyControl : MonoBehaviour
             GameObject BulletInstance = Instantiate(BulletPrefab);
             BulletInstance.transform.SetParent(transform.parent);
             BulletInstance.transform.position = new Vector3(0,0,0);
-            BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
-            //BulletInstance.transform.position = new Vector3(Player.transform.position.x + 30, Random.Range(0, 10), 0);
+            BulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(-10,BulletSpeed,transform.position.z);
+            BulletInstance.transform.position = new Vector3(transform.position.x, transform.position.y - 1.10f, transform.position.z);
 
             Destroy(BulletInstance.gameObject, 5);
             shootTimer = 1;
