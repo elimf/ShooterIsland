@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public float HorizontalScreenLimit;
     public float EnemySnawnTime;
     public GameObject EnnemyPrefab;
     public GameObject Player;
@@ -27,20 +26,10 @@ public class GameController : MonoBehaviour
         {
             GameObject EnnemyObject = Instantiate(EnnemyPrefab);
             EnnemyObject.transform.SetParent(transform);
-            EnnemyObject.transform.position = new Vector3(Player.transform.position.x + 30, Random.Range(0, 10), 0);
-            EnemySnawnTime = Random.Range(1, 4);
+            EnnemyObject.transform.position = new Vector3(Player.transform.position.x + 30, Random.Range(-10, 10), 0);
+            EnemySnawnTime = Random.Range(1, 2);
             Destroy(EnnemyObject.gameObject, 10);
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "PowerUp")
-        {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
-        }
-
     }
 
 }
