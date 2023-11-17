@@ -51,6 +51,9 @@ public class AlienBoss : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.tag == "Limit"){
+            return;
+        }
         takeDommage();
     }
 
@@ -71,7 +74,7 @@ public class AlienBoss : MonoBehaviour
 
     void Tirer()
     {
-        GameObject projectile = Instantiate(projectilePrefab, (transform.position + Vector3.left * 2f), Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, (transform.position + Vector3.left * 5f), Quaternion.identity);
 
         Vector3 direction = (targetToShoot.transform.position - transform.position).normalized;
 
