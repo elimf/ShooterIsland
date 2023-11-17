@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5449677882371018319}
   - component: {fileID: 1835539189889930918}
   - component: {fileID: -6022816615601654756}
-  - component: {fileID: 8826322763817139114}
   m_Layer: 0
   m_Name: Ennemy
   m_TagString: EnnemyBullet
@@ -179,19 +178,6 @@ MonoBehaviour:
   shootTimer: 3
   MovementSpeed: 1
 --- !u!114 &-6022816615601654756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3396454381881256080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f044eaf05970b47a199b3869683ca926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handleDommageTo: {fileID: 4549182804911816709, guid: 813bebbdc921a4a5b87cf154599ff665, type: 3}
---- !u!114 &8826322763817139114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
