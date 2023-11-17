@@ -13,6 +13,9 @@ TagManager:
   - PortalBegin
   - snowCircle1
   - snowCircle2
+  - Level2
+  - Level3
+  - Level1
   layers:
   - Default
   - TransparentFX

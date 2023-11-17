@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PortailLevel2 : MonoBehaviour
 {
+    public GameObject portail;
+
    
     void Start()
     {
@@ -18,8 +20,10 @@ public class PortailLevel2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        string tag = collision.tag;
+        string tag = portail.tag;
+        if(collision.gameObject.tag == "Player"){
         SceneManager.LoadScene(tag);
+        } 
     }
 
     
