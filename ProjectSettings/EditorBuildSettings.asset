@@ -12,16 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 656745b032ca54061b1e68d579d31200
   - enabled: 1
-    path: Assets/Scenes/BossLevel.unity
-    guid: 43441132ed4b048779356c8a5f8b067b
-  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: a9f6e654148da4a52bd22fd814b5a9d4
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: f53a3eb4e7929448390644e2d0049e31
   - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 6f0528379d877400881285729842328b
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: d7eb3d654b29c46bea6aec28569a28dc
+  - enabled: 1
+    path: Assets/Scenes/BossLevel.unity
+    guid: 43441132ed4b048779356c8a5f8b067b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 5fb37a9ba4054495881b211d3f02e488, type: 2}
