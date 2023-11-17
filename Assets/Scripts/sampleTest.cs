@@ -49,7 +49,7 @@ public class sampleTest : MonoBehaviour
             rb.MovePosition(rb.position + move* speed * (Time.fixedDeltaTime));
         }
         else {
-            linear = new Vector2(3f + indiceSpeed, 0);
+            linear = new Vector2(5f + indiceSpeed, 0);
             rb.MovePosition(rb.position + ((move * speed) + linear) * (Time.fixedDeltaTime));
         }
         
