@@ -11,9 +11,7 @@ public class PortailLevelBoss : MonoBehaviour
     void Start()
     {
         ship.SetActive(true);
-        StartCoroutine(removePortalwithTime(7));
-        gameObject.SetActive(false);
-
+        StartCoroutine(removePortalwithTime(5));
 
     }
     IEnumerator removePortalwithTime(int time)
@@ -22,7 +20,7 @@ public class PortailLevelBoss : MonoBehaviour
         
        
             yield return new WaitForSeconds(time);
-      
+              gameObject.SetActive(false);
 
 
     }
