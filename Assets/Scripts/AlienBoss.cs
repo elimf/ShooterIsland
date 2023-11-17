@@ -14,7 +14,7 @@ public class AlienBoss : MonoBehaviour
 
     public StateStarShip stateEnemy = new StateStarShip();
 
-    GameObject portail;
+    public GameObject portail;
 
 
 
@@ -27,7 +27,7 @@ public class AlienBoss : MonoBehaviour
     }
 
         StartCoroutine(Tir());
-        portail = GameObject.FindWithTag("SceneEnd");
+        //portail = GameObject.FindWithTag("SceneEnd");
         stateEnemy.setPointLife(indexLife);
     }
 

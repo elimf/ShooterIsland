@@ -1170,8 +1170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 1956244202}
-  activationDelay: 9
-  deactivationDelay: 4
+  activationDelay: 3
+  deactivationDelay: 2
 --- !u!4 &746634927
 Transform:
   m_ObjectHideFlags: 0
@@ -2263,7 +2263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 526825476}
-  activationDelay: 5
+  activationDelay: 4
   deactivationDelay: 3
 --- !u!4 &1459056229
 Transform:
@@ -2917,6 +2917,7 @@ MonoBehaviour:
   targetToShoot: {fileID: 778010199}
   projectilePrefab: {fileID: 2007255642}
   intervalleTir: 5
+  portail: {fileID: 1837909235}
 --- !u!1001 &1521508299
 PrefabInstance:
   m_ObjectHideFlags: 0
