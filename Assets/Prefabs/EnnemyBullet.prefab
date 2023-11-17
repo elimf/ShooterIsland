@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4493252908719331296}
   m_Layer: 0
   m_Name: EnnemyBullet
-  m_TagString: EnnemyBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8935667436270305984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7174096, w: 0.6966517}
-  m_LocalPosition: {x: -29.576, y: 0.307, z: 0.444}
+  m_LocalPosition: {x: 0, y: 0, z: 0.444}
   m_LocalScale: {x: 0.36176828, y: 0.47725075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
